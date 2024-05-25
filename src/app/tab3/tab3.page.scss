@@ -1,0 +1,12 @@
+
+ion-content{
+  --ion-background-color: rgb(187,203,246) linear-gradient(90deg, rgba(187,203,246,1) 0%, rgba(162,173,253,1) 52%, rgba(134,128,248,1) 100%);
+}
+h3{color: white;font-weight: bold;}
+.icon { font-size: 30px; color: white;margin-top: 10px;}
+.sunny  {color: yellow;}
+.cloudy{color: white;}
+ion-list{
+  --ion-background-color:transparent!important
+}
+ion-label{ color: white!important;}

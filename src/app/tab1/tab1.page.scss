@@ -1,0 +1,16 @@
+ion-content{
+    --ion-background-color: rgb(187,203,246) linear-gradient(90deg, rgba(187,203,246,1) 0%, rgba(162,173,253,1) 52%, rgba(134,128,248,1) 100%);
+  }
+  
+input{
+    height: 35px;
+    width: 320px;
+}  
+button{
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    width: 50px;
+    height: 33px;
+    margin-left: 10px;
+}
