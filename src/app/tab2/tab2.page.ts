@@ -8,8 +8,6 @@ import { Geolocation } from '@capacitor/geolocation';
   styleUrls: ['tab2.page.scss']
 })
 export class Tab2Page implements OnInit{
-  icon:string ="heart-outline";
-  isLike:boolean = false;
 
   fetchData:any;
   city:string = "";
@@ -26,7 +24,7 @@ export class Tab2Page implements OnInit{
 
   ngOnInit(): void {
     this.getCurrentPossition().then((coordinates)=>{
-     // console.log(coordinates);
+    //  console.log(coordinates);
       this.getCurrentWeather(coordinates.coords.latitude,coordinates.coords.longitude);
       this.get5DaysWeather(coordinates.coords.latitude,coordinates.coords.longitude);
       //this.watchPosition();
@@ -61,10 +59,7 @@ export class Tab2Page implements OnInit{
         this.deg = this.fetchData.main.temp;
         this.wind = this.fetchData.wind.speed;
         this.hum = this.fetchData.main.humidity;
-        // if(this.fetchData.weather[0].main == "Clear") this.currentIcon="sunny";
-        // else if(this.fetchData.weather[0].main == "Sunny") this.currentIcon="sunny";
-        // else if(this.fetchData.weather[0].main == "Rainy") this.currentIcon="rainy";
-       this.currentIcon = "https://openweathermap.org/img/w/"+this.fetchData.weather[0].icon+".png";
+       this.currentIcon = "https://openweathermap.org/img/wn/"+this.fetchData.weather[0].icon+"@4x.png";
       }
     );
   }
@@ -72,19 +67,10 @@ export class Tab2Page implements OnInit{
   get5DaysWeather(lat:any,lon:any){
     this.weather.get5DaysWeather(lat,lon).subscribe(
       (data) => {
+        console.log(data);
+        
         this.fetch5DaysData = data;
       }
     );
   }
-
-  like(){
-    if(this.isLike==false){
-      this.isLike=true;
-      this.icon = "heart";
-    }else{
-      this.isLike=false;
-      this.icon = "heart-outline";
-    }
-  }
-
 }

@@ -6,18 +6,22 @@ ion-content{
 ion-item{
   --ion-background-color:transparent!important
 }
-p{color: white;}
-h1,h2{color: white;font-weight: bold;}
-
-.icon{font-size: 200px; padding-top: 50px;}
+// p{color: white;}
+// h1,h2{color: white;font-weight: bold;}
+.color{
+  color: black;
+}
+.bigİcon{
+  width: 300px;
+  height: 300px;
+}
 .sunny { color: yellow;}
 .derece{font-size: 80px; margin: 0;}
 .ruzgarYonu{ transform: rotate(67deg);}
-.icon p{font-size: 20px;}
-.cloudy{color: white;}
-.flash{color: gold;}
-.rainy{color: skyblue;}
-.thunderstorm{color: gold;}
-.liste ion-icon{font-size: 20px;}
-.like{font-size: 30px;color:white; padding-right: 20px;}
+.list-item-time{
+  font-size: 14px;
+}
+.liste{
+  margin-top: 90px;
+}
 
